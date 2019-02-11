@@ -1,0 +1,123 @@
+//glowne zdjecie
+
+section.sliderIMG {
+    height: 80vh;
+    width: 100%;
+    background-image: url('../img/headerImg.jpg');
+    background-position: center;
+
+}
+
+//duzy prostokat z tekstami
+
+.center-box {
+    padding-bottom: $box-margin-bottom;
+    background-color: transparent;
+    .blue-box {
+        max-width: 1100px;
+        margin: 0 auto;
+        background-color: $primary-color;
+        transform: translateY($box-translateY);
+        border-radius: 15px;
+        color: #fff;
+        .box-container{
+            box-sizing: border-box;
+            padding: 10px 10px 40px 10px;
+            .left-text {
+                text-align: right;
+                h1 {
+                    font-size: $text-left-fs;
+                    margin: 50px 0 50px 20px;
+                    font-weight: 600;
+                }
+            }
+            .right-text {
+                text-align: left;
+                p{
+                    font-size: $text-right-fs;
+                    margin: 60px 10px 0 20px;
+                }
+            }
+        }
+    }
+}
+
+//4 ikonki
+
+.company-info{
+    .info-item{
+        .content{
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            text-align: center;
+            padding: 10rem 0;
+            .circle{
+                border: 3px solid  $secondary-color;
+                display: inline-block;
+                border-radius: 50%;
+                padding: 2.5rem;
+                overflow: hidden;
+                transition: .15s linear all;
+                &:hover{
+                    //border: none;
+                    border-color: $primary-color;
+                    transform: translateY(15px) scale(0.95);
+                    i{
+                        color: $secondary-color;
+                    }
+                }
+            }
+            i{
+                font-size: 8rem;
+                color: $primary-color;
+                width: 100px;
+                height: 100px;
+                line-height: 120%;
+            }
+            h4{
+                font-size: 21px;
+                margin: 2.5rem 0;
+            }
+        }
+    }
+}
+
+@media(max-width: 1225px) {
+    .center-box {
+        .blue-box {
+            width: 90%;
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .center-box {
+        .blue-box {
+            .box-container{
+                .left-text {
+                    text-align: center;
+
+                    h1 {
+                        font-size: 42px;
+                        margin: 50px 0 15px 0;
+                    }
+                }
+
+                .right-text {
+                    text-align: center;
+                    p {
+                        font-size: 28px;
+                        margin: 28px;
+                    }
+                }
+            }
+        }
+    }
+    .company-info{
+        .info-item{
+            .content{
+                padding: 5rem 0;
+            }
+        }
+    }
+}

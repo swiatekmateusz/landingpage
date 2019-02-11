@@ -1,0 +1,422 @@
+.offer-container{
+    .heading-of-article{
+        margin-bottom: 1rem;
+        h3{
+            transition: .2s all linear;
+            color: #bbb;
+            font-size: $h3-fs;
+            display: inline-block;
+            padding-bottom: 3px;
+            border-bottom: 2px solid $secondary-color;
+            white-space: nowrap;
+        }
+    }
+
+    .offer-article{
+        overflow: hidden;
+        padding: 4rem 15px;
+        margin-bottom: 0.4rem;
+        transition: .2s all linear;
+        text-align: center;
+        &:hover{
+            background-color: rgba(135,135,135,0.3);
+            .icon{
+                transform: scale(1.1)
+            }
+            i{
+                color: #38ff98;
+            }
+            ul{
+                li{
+                    color: white;
+                    &::before{
+                        color: white;
+                    }
+                }
+            }
+            .heading-of-article{
+                h3{
+                    color: white;
+                    border-bottom: 2px solid #38ff98;
+                }
+            }
+        }
+        .icon{
+            transition: .3s;
+        }
+        i{
+            margin: 10px 0 20px 0;
+            font-size: $icon-fs;
+            color: $secondary-color;
+            transition: .2s all linear;
+        }
+        ul{
+            display: inline-block;
+            list-style: none;
+            color: #bbb;
+            padding: 0;
+            margin-top: 20px;
+            li{
+                transition: .2s all linear;
+                font-size: $ul-li-fs;
+                text-align: left;
+                padding-left: 18px;
+                position: relative;
+                min-height: 60px;
+                 &:before{
+                     content:""; 
+                     height: 6px;
+                     width: 6px;
+                     background-color: #bbb;
+                     border-radius: 50%;
+                     position: absolute;
+                     left: -0;
+                     top: 7px;
+                     margin: 0.4rem;
+                 }
+
+            }
+        }
+    }
+    counter-reset: section;
+    .work{
+        position: relative;
+        border-bottom: 3px solid #bbb;
+        padding-bottom: 5rem;
+        &:nth-child(1),&:nth-child(2){
+            z-index: 1;
+        }
+        .work-item{
+            padding: 3rem 0 5rem 0;
+            text-align: center;
+            color: #bbb;
+            font-size: 3rem;
+            i{
+                font-size: 8rem;
+                margin: 4rem 0;
+                color: $secondary-color;
+            }
+        }
+        &:hover{
+            background-color: rgba(135,135,135,0.3);
+            .work-item{
+                color: white;
+                i{
+                    color: #8cffef;
+                }
+            }
+        }
+        &::after{
+            content: counter(section);
+            z-index: 2;
+            color: white;
+            font-size: 3rem;
+            line-height: 50px;
+            text-align: center;
+            counter-increment: section;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%,50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color:$secondary-color;
+        }
+    }
+    .tiles{
+        margin: 6rem auto;
+    }
+    .offer-item{
+        text-align: center;
+        margin: 30px 0;
+        .content{
+            height: 100%;
+            background-color: rgba($color: #ddd, $alpha: 0.1);
+            border-radius: 1rem;
+            box-shadow: 0 0 50px -23px #15253c;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            transition: .3s;
+            &:hover{
+                background-color: rgba($color: #ddd, $alpha: 0.25);
+                a{
+                    h3{
+                        transform: scale(0.95) translateY(5%)
+                    }
+                    &:hover{
+                        transform: scale(1.1) translateY(0%);
+                        text-decoration: none;
+                    }
+                }
+                i{
+                    transform: scale(1.1) translateY(15%)
+                }
+                .btn{
+                    transform: translateY(-20%);
+                    &:hover{
+                        transform: scale(1.1) translateY(-20%);
+                        text-decoration: none;
+                    }
+                }
+            }
+            i{
+                transition: .3s;
+                font-size: 80px;
+                padding: 3rem;
+                margin-top: 3rem;
+                color: white;
+            }
+            a{
+                color: $secondary-color;
+                transition: .2s;
+                &:hover{   
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                h3{
+                    transition: .31s;
+                    text-transform: uppercase;
+                    font-size: 28px;
+                    padding: 0 15px;
+                    color: #8cffef;
+                    white-space: normal;
+                }
+            }
+            p{
+                font-size: 21px;
+                padding: 5px 15px 20px 15px;
+                color: white;
+    
+            }
+            .btn{
+                margin-bottom: 36px;
+                font-size: 18px;
+                font-weight: 600;
+                color: #fff;
+                background-color: $secondary-color;
+                border-radius: 1rem;
+                transition: .1s all linear;
+                &:hover{
+                    text-decoration: none;
+                    cursor: pointer;
+                    background-color: transparent;
+                    transform: scale(1.1);
+                    box-shadow:0 0 0 2px transparent, 0 0 0 3px $secondary-color;
+                }
+            }
+        }
+    }
+    .why-sellwise{
+        margin: 10rem 0 15rem 0;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        
+        >div{
+            position: relative;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        h2{
+            color: $primary-color;
+        }
+        img{
+            transition: .3s all linear;
+            transform-origin: 50% 50%;
+            width:100%;
+            max-width: 90px;
+            filter: invert(1);
+            padding-bottom: 50 px;
+            box-sizing: border-box;
+        }
+        h4{
+            font-size: 24px;
+            letter-spacing: 0.2rem;
+            padding: 2rem 25px;
+            color: $primary-color;
+            min-height: 55px;
+        }
+    }
+}
+
+.div-with-number{
+    background-image: url("../img/offerImg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    position: relative;
+    min-height: 625px;
+    box-shadow: 0 0 0 2px white;
+    overflow: hidden;
+    >div{
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        margin-left: 0;
+    }
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $primary-color, $alpha: 0.3)
+    }
+    .text{
+        text-align: center;
+        padding: 10rem 0;
+        h2{
+            font-size: 4.3rem;
+            font-weight: 700;
+            padding: 0 15px;
+            color: white;
+            text-shadow: 2px 0px black
+        }
+        h3{
+            font-size: 7rem;
+            color: white;
+            transition: .3s linear all;
+            i{
+                text-shadow: 2px 0px black, 0px 2px black;
+                animation: phone 1.5s linear infinite alternate;
+                margin: 2rem 0;
+            }
+        }
+        h4{
+            display: block;
+            text-shadow: 2px 0px black;
+            transition: .2s;
+            font-size: 6rem;
+            position: relative;
+            color: white;
+            //white-space: nowrap;
+            >div{
+                transition: .1s linear all;
+                &:hover{
+                    transform: scale(1.2);
+                }
+                &:before,&:after{
+                    content: "";
+                    width: 50px;
+                    height: 2px;
+                    position: absolute;
+                    display: block;
+                    background-color: white;
+                    top: calc(50% - 1px);
+                    left: calc(50% - 220px);
+                }
+                &:after{
+                    left: unset;
+                    right: calc(50% - 220px);
+                }
+                a{
+                    color: white;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+@media(min-width: 1500px){
+    .offer-container{
+        .offer-article{
+            ul{
+                padding: 0 5rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 430px){
+    .div-with-number{
+        .text{
+            h2{
+                font-size: 3.5rem;
+            }
+            h4{
+                font-size: 4rem;
+                div{
+                    &::before{
+                        left: calc(50% - 170px)
+                    }
+                    &::after{
+                        right: calc(50% - 170px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(width: 766px){
+    .offer-container{
+        .why-sellwise{
+            >div{
+                flex-basis: 50%;
+            }
+        }
+    }
+}
+
+@media(width: 767px){
+    .offer-container{
+        .why-sellwise{
+            >div{
+                flex-basis: 50%;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 767px){
+    .offer-container{
+        .offer-article{
+            width: 100%;
+        }
+        .why-sellwise{
+            display: block;
+        }
+        .work{
+            width: 100%;
+        }
+    }
+}
+
+
+@keyframes phone{
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+    40%{
+        transform: rotate(0deg) scale(1);
+    }
+    52%{
+        transform: rotate(0deg) scale(1.1);
+    }
+    64%{
+        transform: rotate(15deg) scale(1.1)
+    }
+    76%{
+        transform: rotate(-15deg) scale(1.1)
+    }
+    88%{
+        transform: rotate(15deg) scale(1.1)
+    }
+    100%{
+        transform: rotate(-15deg) scale(1.1);
+    }
+}

@@ -1,0 +1,134 @@
+.contact-image{
+    background-image: linear-gradient(135deg, rgba(102, 183, 172, .6), rgba(21, 37, 60, .8)), url(../img/headerImg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact{
+    color: white;
+    .header{
+        text-align: left;
+        h2{
+            font-size: 40px;
+            &::after{
+                margin: 2rem 0;
+                background-color: $primary-color;
+            }
+        }
+    }
+    form{
+        margin-right: 0%;
+        font-size: 21px;
+        max-width: 900px;
+        .flex{
+            input{
+                box-sizing: border-box;
+                flex-grow: 1;
+                margin: 0 10px 10px 0;
+                padding: 8px 15px;
+                color: black;
+            }
+        }
+        textarea{
+            width: calc(100% - 10px);
+            color: black;
+            padding: 8px 15px;
+        }
+        p{
+            position: relative;
+            font-size: 13px;
+            line-height: 25px;
+            margin-left: 20px;
+            font-weight: 700;
+            span{
+                position: absolute;
+                top: 9px;
+                left: -20px;
+                height: 15px;
+                width: 15px;
+                input{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        button{
+            margin: 20px 0;
+            padding: 5px 25px;
+            border: 3px solid white;
+            border-radius: 0.5rem;
+            font-size: 3rem;
+            background-color: transparent;
+            transition: .15s all linear;
+            &:hover{
+                border-color: transparent;
+                color: $primary-color;
+                background-color: #fff;
+            }
+        }
+    }
+    .dane{
+        ul{
+            list-style: none;
+            padding: 0;
+            font-size: 18px;
+            li{
+              margin: 40px 0;   
+            }
+        }
+        .info{
+            flex-basis: 45%;
+            font-size: 16px;
+            word-break: break-all;
+            &:first-child{
+                padding-right: 10px;
+            }
+            h6{
+                font-weight: bold;
+                font-size: 2rem;
+            }
+            i{
+                font-size: 10rem;
+                margin: 12px 0;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 1200px){
+    .contact{
+        .header{
+            text-align: center;
+            padding-top: 6rem;
+            h2{
+                &::after{
+                    margin: 2rem auto;
+                }
+            }
+        }
+        form{
+            margin: 0 5%;
+            textarea{
+                min-height: 375px;
+            }
+        }
+        .dane{
+            text-align: center;
+            .info{
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media(max-width: 991px){
+    .contact{
+        form{
+            button{
+                margin: 0 auto;
+            }
+        }
+    }
+}

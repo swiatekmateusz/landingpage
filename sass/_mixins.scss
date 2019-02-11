@@ -1,0 +1,13 @@
+@mixin flex($direction: row,$wrap: nowrap,$justify: unset, $align-content: unset){
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify;
+    align-content: $align-content;
+}
+
+@mixin centerInBox($x:-50%,$y:-50%){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate($x,$y)
+}

@@ -1,0 +1,94 @@
+.partners{
+    overflow: hidden;
+    .header{
+        margin-bottom: 0 !important;
+        h2{
+            color: $primary-color;
+            word-break: break-all;
+            &::after{
+                background-color: $secondary-color;
+            }
+        }
+    }
+    .partnersSlider{
+        padding: 60px 0 80px 0;
+        overflow: hidden;
+        .slider{
+            display: flex;
+            justify-content: flex-start;
+            .sliderItem{
+                font-size: 100px;
+                text-align: center;
+                height: 100px;
+                line-height: 100px;
+            }
+        }
+    }
+
+
+    .quot-item{
+        color: white;
+        padding-bottom: 40px;
+        .flex{
+            flex-wrap: nowrap;
+        }
+        blockquote{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            border-radius: 1rem;
+            background-color: $primary-color;
+            padding: 5px;
+            border: 0;
+            position: relative;
+            i{
+                padding: 50px 20px 20px 20px;
+                font-size: 50px;
+            }
+            p{
+                font-size: 18px;
+                padding: 50px 40px 30px 0;
+                line-height: 180%;
+                
+            }
+            footer{
+                &::before{
+                    content: none;
+                }
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                padding: 20px 50px 50px 50px;
+                h5{
+                    color: $secondary-color;
+                    font-size: 1.8rem;
+                }
+                h6{
+                    color: white;
+                    font-size: 1.5rem;;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 991px){
+    .partners{
+        .quot-item{
+            blockquote{
+                p{
+                    font-size: 25px;
+                }
+                footer{
+                    h5{
+                        font-size: 2.5rem;
+                    }
+                    h6{
+                        font-size:2.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

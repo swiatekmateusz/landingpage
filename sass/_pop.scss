@@ -1,0 +1,64 @@
+.pop-number.active{
+    display: block;
+}
+
+.pop-number{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    .window{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+        text-align: center;
+        padding: 4rem;
+        .close{
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 4rem;
+        }
+        h3{
+            margin: 1.2rem 0 3.5rem 0;
+            font-size: 3rem;
+            &::after{
+                content: '';
+                display: block;
+                width: 50%;
+                margin: 15px auto 0px auto;
+                height: 2px;
+                background-color: $secondary-color;
+            }
+        }
+        input{
+            box-sizing: border-box;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+            font-size: 2rem;
+            padding: 5px 12px;
+            margin-right: 5px;
+        }
+        button{
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            padding: 5px 21px;
+            font-size: 2rem;
+            font-weight: bold;
+            transition: .3s linear all;
+            margin-top: 10px;
+            &:hover{
+                background-color: #fff;
+                color: $primary-color;
+                box-shadow: 0 0 0 2px $primary-color;
+            }
+        }
+    }
+}
